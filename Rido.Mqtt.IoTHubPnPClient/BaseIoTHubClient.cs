@@ -10,12 +10,12 @@ namespace Rido.Mqtt.IoTHubPnPClient
         public string InitialState = string.Empty;
 
         protected readonly IPropertyStoreReader getTwinBinder;
-        protected readonly IPropertyStoreWriter<string> updateTwinBinder;
+        protected readonly IPropertyStoreWriter updateTwinBinder;
 
-        public BaseIoTHubClient(IMqttConnection connection, ConnectionSettings cs)
+        public BaseIoTHubClient(IMqttConnection connection)
         {
             Connection = connection;
-            ConnectionSettings = cs;
+            //ConnectionSettings = cs;
             getTwinBinder = new GetTwinBinder(connection);
             updateTwinBinder = new UpdateTwinBinder(connection);
         }   

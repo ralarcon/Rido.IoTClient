@@ -46,7 +46,7 @@ namespace M2MRunner
                 Console.WriteLine(e.ReasonInfo);
             };
 
-            client.InitialState = await client.GetTwinAsync();
+            client.InitialState = await client.GetTwinAsync(stoppingToken);
 
             client.Property_enabled.OnProperty_Updated = Property_enabled_UpdateHandler;
             client.Property_interval.OnProperty_Updated = Property_interval_UpdateHandler;
@@ -177,7 +177,7 @@ namespace M2MRunner
             };
             (string u, string p) = SasAuth.GenerateHubSasCredentials(cs.HostName, cs.DeviceId, cs.SharedAccessKey, cs.ModelId, cs.SasMinutes);
             var connection = new M2mConnection(cs.HostName, cs.DeviceId, u, p);
-            return new memmon(connection, cs);
+            return new memmon(connection) { ConnectionSettings = cs};
         }
     }
 }

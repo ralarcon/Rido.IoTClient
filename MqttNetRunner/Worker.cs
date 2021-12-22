@@ -38,7 +38,7 @@ namespace MqttNetRunner
             };
             (string u, string p) = SasAuth.GenerateHubSasCredentials(cs.HostName, cs.DeviceId, cs.SharedAccessKey, cs.ModelId, cs.SasMinutes);
             var connection = await MqttNetConnection.CreateAsync(cs.HostName, cs.DeviceId, u, p, token);
-            return new OneReadOnlyPropertyClient(connection, cs);
+            return new OneReadOnlyPropertyClient(connection) { ConnectionSettings = cs }; 
         }
     }
 }

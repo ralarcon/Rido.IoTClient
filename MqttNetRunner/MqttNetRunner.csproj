@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>dotnet-MqttNetRunner-B4D38862-4B13-43CF-BC40-B2144FBBE9AD</UserSecretsId>
   </PropertyGroup>

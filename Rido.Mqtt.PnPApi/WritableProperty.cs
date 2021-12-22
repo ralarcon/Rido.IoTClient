@@ -8,7 +8,7 @@ namespace Rido.Mqtt.PnPApi
         public PropertyAck<T> PropertyValue;
         private readonly string propertyName;
         private readonly string componentName;
-        private readonly IPropertyStoreWriter<string> updateTwin;
+        private readonly IPropertyStoreWriter updateTwin;
         private readonly IPropertyUpdateCallback<T> desiredBinder;
 
         public Func<PropertyAck<T>, Task<PropertyAck<T>>> OnProperty_Updated
@@ -17,7 +17,7 @@ namespace Rido.Mqtt.PnPApi
             set => desiredBinder.OnProperty_Updated = value;
         }
 
-        public WritableProperty(IPropertyStoreWriter<string> updater, IPropertyUpdateCallback<T> desiredBinder, string name, string component = "")
+        public WritableProperty(IPropertyStoreWriter updater, IPropertyUpdateCallback<T> desiredBinder, string name, string component = "")
         {
             propertyName = name;
             componentName = component;

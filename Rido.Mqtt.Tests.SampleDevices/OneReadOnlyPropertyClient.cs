@@ -12,7 +12,7 @@ namespace Rido.Mqtt.Tests.SampleDevices
     {
         public const string ModelId = "dtmi:com:a;1";
         public ReadOnlyProperty<int> Property_myInt;
-        public OneReadOnlyPropertyClient(IMqttConnection connection, ConnectionSettings cs) : base(connection, cs)
+        public OneReadOnlyPropertyClient(IMqttConnection connection) : base(connection)
         {
             Property_myInt = new ReadOnlyProperty<int>(base.updateTwinBinder, "myInt");
         }

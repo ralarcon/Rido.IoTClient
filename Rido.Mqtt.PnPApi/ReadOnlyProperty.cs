@@ -4,13 +4,13 @@ namespace Rido.Mqtt.PnPApi
 {
     public class ReadOnlyProperty<T>
     {
-        private readonly IPropertyStoreWriter<string> updater;
+        private readonly IPropertyStoreWriter updater;
         public readonly string Name;
         private readonly string component;
         public T PropertyValue;
         public string Version;
 
-        public ReadOnlyProperty(IPropertyStoreWriter<string> updater, string name, string component = "")
+        public ReadOnlyProperty(IPropertyStoreWriter updater, string name, string component = "")
         {
             this.updater = updater;
             Name = name;

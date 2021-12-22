@@ -3,7 +3,7 @@ using Rido.Mqtt.PnPApi.Binders;
 
 namespace Rido.Mqtt.IoTHubPnPClient
 {
-    internal class UpdateTwinBinder : IPropertyStoreWriter<string>
+    internal class UpdateTwinBinder : IPropertyStoreWriter
     {
         private readonly ServiceRequestResponseBinder binder;
 

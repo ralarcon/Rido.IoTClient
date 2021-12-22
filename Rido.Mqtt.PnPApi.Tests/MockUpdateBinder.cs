@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace Rido.Mqtt.PnPApi.Tests
 {
-    internal class MockUpdateBinder<T> : IPropertyStoreWriter<T>
+    internal class MockUpdateBinder : IPropertyStoreWriter
     {
-        internal Dictionary<string, object> ReceivedPayload { get; set; }
+        internal object ReceivedPayload { get; set; }
 
         public async Task<string> ReportPropertyAsync(object payload, CancellationToken token = default)
         {

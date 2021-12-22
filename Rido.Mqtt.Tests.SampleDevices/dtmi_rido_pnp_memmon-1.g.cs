@@ -16,7 +16,7 @@ namespace dtmi_rido_pnp
         public Telemetry<double> Telemetry_workingSet;
         public Command<Cmd_getRuntimeStats_Request, Cmd_getRuntimeStats_Response> Command_getRuntimeStats;
 
-        public memmon(IMqttConnection c, ConnectionSettings cs) : base(c, cs)
+        public memmon(IMqttConnection c) : base(c)
         {
             Property_started = new ReadOnlyProperty<DateTime>(base.updateTwinBinder, "started");
             Property_interval = new WritableProperty<int>(this.updateTwinBinder, new PropertyUpdateCallbackBinder<int>(c, "interval"), "interval");

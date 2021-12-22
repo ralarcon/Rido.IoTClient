@@ -9,7 +9,7 @@ namespace Rido.Mqtt.PnPApi.Tests
         [Fact]
         public async Task ReportSimpleRootProperty()
         {
-            MockUpdateBinder<string> updaterMock = new();
+            MockUpdateBinder updaterMock = new();
             ReadOnlyProperty<double> rop = new(updaterMock, "aProp");
             await rop.ReportPropertyAsync(0.4);
 
@@ -25,7 +25,7 @@ namespace Rido.Mqtt.PnPApi.Tests
         [Fact]
         public async Task ReportComplexRootProperty()
         {
-            MockUpdateBinder<string> updaterMock = new();
+            MockUpdateBinder updaterMock = new();
             ReadOnlyProperty<AComplexObj> rop = new(updaterMock, "aComplexObj");
             await rop.ReportPropertyAsync(new AComplexObj() { AStringProp = "hello", AIntProp = 23});
 
@@ -41,7 +41,7 @@ namespace Rido.Mqtt.PnPApi.Tests
         [Fact]
         public async Task ReportSimplePropertyInComponent()
         {
-            MockUpdateBinder<string> updaterMock = new();
+            MockUpdateBinder updaterMock = new();
             ReadOnlyProperty<double> rop = new(updaterMock, "aProp", "c1");
             await rop.ReportPropertyAsync(0.4, true);
 
@@ -65,7 +65,7 @@ namespace Rido.Mqtt.PnPApi.Tests
         [Fact]
         public async Task ReportComplexPropertyInComponent()
         {
-            MockUpdateBinder<string> updaterMock = new();
+            MockUpdateBinder updaterMock = new();
             ReadOnlyProperty<AComplexObj> rop = new(updaterMock, "aComplexObj", "c1");
             await rop.ReportPropertyAsync(new AComplexObj() { AStringProp ="hello", AIntProp =23}, true);
 

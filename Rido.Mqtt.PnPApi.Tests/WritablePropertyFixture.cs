@@ -12,11 +12,11 @@ namespace Rido.Mqtt.PnPApi.Tests
         static string Stringify(object o) => System.Text.Json.JsonSerializer.Serialize(o);
 
         //readonly IMqttConnection connection;
-        readonly MockUpdateBinder<string> updaterMock;
+        readonly MockUpdateBinder updaterMock;
         public WritablePropertyFixture()
         {
             //connection = new MockMqttConnection();
-            updaterMock = new MockUpdateBinder<string>();
+            updaterMock = new MockUpdateBinder();
         }
 
         [Fact]
