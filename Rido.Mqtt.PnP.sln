@@ -31,6 +31,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rido.Mqtt.IoTHubPnPClient",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rido.Mqtt.PnPApi.Tests", "Rido.Mqtt.PnPApi.Tests\Rido.Mqtt.PnPApi.Tests.csproj", "{D9BA3F61-B2AD-42B1-A1A4-4C029BB4402A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rido.Mqtt.Tests.SampleDevices", "Rido.Mqtt.Tests.SampleDevices\Rido.Mqtt.Tests.SampleDevices.csproj", "{8EC1B7A7-5F2C-489E-B03A-A80110902B09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MqttNetRunner", "MqttNetRunner\MqttNetRunner.csproj", "{F4C6CD2E-7200-43E5-BC33-DDC5C905028F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rido.Mqtt.MqttNetPnPAdapter", "Rido.Mqtt.MqttNetPnPAdapter\Rido.Mqtt.MqttNetPnPAdapter.csproj", "{16461CA6-B9A8-4507-92A9-76204E539DE6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rido.Mqtt.M2mPnPAdapter", "Rido.Mqtt.M2mPnPAdapter\Rido.Mqtt.M2mPnPAdapter.csproj", "{2992E8A4-4783-49D9-830B-5E1D566711FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M2MRunner", "M2MRunner\M2MRunner.csproj", "{F6AADF92-0855-4B71-BBF0-972508B290B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +91,26 @@ Global
 		{D9BA3F61-B2AD-42B1-A1A4-4C029BB4402A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9BA3F61-B2AD-42B1-A1A4-4C029BB4402A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9BA3F61-B2AD-42B1-A1A4-4C029BB4402A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EC1B7A7-5F2C-489E-B03A-A80110902B09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EC1B7A7-5F2C-489E-B03A-A80110902B09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EC1B7A7-5F2C-489E-B03A-A80110902B09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EC1B7A7-5F2C-489E-B03A-A80110902B09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4C6CD2E-7200-43E5-BC33-DDC5C905028F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4C6CD2E-7200-43E5-BC33-DDC5C905028F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4C6CD2E-7200-43E5-BC33-DDC5C905028F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4C6CD2E-7200-43E5-BC33-DDC5C905028F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16461CA6-B9A8-4507-92A9-76204E539DE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16461CA6-B9A8-4507-92A9-76204E539DE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16461CA6-B9A8-4507-92A9-76204E539DE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16461CA6-B9A8-4507-92A9-76204E539DE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2992E8A4-4783-49D9-830B-5E1D566711FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2992E8A4-4783-49D9-830B-5E1D566711FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2992E8A4-4783-49D9-830B-5E1D566711FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2992E8A4-4783-49D9-830B-5E1D566711FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6AADF92-0855-4B71-BBF0-972508B290B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6AADF92-0855-4B71-BBF0-972508B290B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6AADF92-0855-4B71-BBF0-972508B290B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6AADF92-0855-4B71-BBF0-972508B290B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

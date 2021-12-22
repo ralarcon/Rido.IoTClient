@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MqttAdapter\Rido.Mqtt.PnPApi.csproj" />
+    <ProjectReference Include="..\Rido.Mqtt.PnPApi\Rido.Mqtt.PnPApi.csproj" />
   </ItemGroup>
 
 </Project>

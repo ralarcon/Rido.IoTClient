@@ -18,7 +18,7 @@ namespace Rido.Mqtt.MqttNetPnPAdapter
         public event Func<MqttMessage, Task>? OnMessage;
         public event EventHandler<DisconnectEventArgs>? OnMqttClientDisconnected;
 
-        public static async Task<IMqttConnection> CreateAsync(string host, string clientId, string username, string password)
+        public static async Task<IMqttConnection> CreateAsync(string host, string clientId, string username, string password, CancellationToken token = default)
         {
             var client = new MqttFactory().CreateMqttClient(MqttNetTraceLogger.CreateTraceLogger());
             await client.ConnectAsync(new MqttClientOptionsBuilder()
@@ -26,9 +26,8 @@ namespace Rido.Mqtt.MqttNetPnPAdapter
                 .WithTls()
                 .WithClientId(clientId)
                 .WithCredentials(username, password)
-                .Build());
+                .Build(), token);
 
-            Console.WriteLine("Connected");
             return new MqttNetConnection(client);
         }
 
@@ -63,7 +62,6 @@ namespace Rido.Mqtt.MqttNetPnPAdapter
             {
                 throw new ApplicationException("Error publishing to " + topic);
             }
-            Console.WriteLine($"-> {topic} {payload}");
             return 0;
         }
 
@@ -76,9 +74,7 @@ namespace Rido.Mqtt.MqttNetPnPAdapter
             {
                 throw new ApplicationException("Error subscribing to " + topic);
             }
-            Console.WriteLine($"+ {topic}");
             return 0;
-
         }
     }
 

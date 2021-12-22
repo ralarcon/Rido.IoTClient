@@ -18,7 +18,7 @@ namespace Rido.Mqtt.IoTHubPnPClient
             ConnectionSettings = cs;
             getTwinBinder = new GetTwinBinder(connection);
             updateTwinBinder = new UpdateTwinBinder(connection);
-        }
+        }   
 
         public Task<string> GetTwinAsync(CancellationToken cancellationToken = default) =>
             getTwinBinder.ReadPropertiesDocAsync(cancellationToken);
