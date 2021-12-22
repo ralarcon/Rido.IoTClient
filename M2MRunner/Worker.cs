@@ -1,6 +1,5 @@
 using dtmi_rido_pnp;
 using Humanizer;
-using Rido.Mqtt.IoTHubPnPClient;
 using Rido.Mqtt.M2mPnPAdapter;
 using Rido.Mqtt.PnPApi;
 using Rido.Mqtt.Tests.SampleDevices;
@@ -26,7 +25,7 @@ namespace M2MRunner
         const bool default_enabled = true;
         const int default_interval = 8;
 
-        memmon? client;
+        memmon client;
 
         public Worker(ILogger<Worker> logger, IConfiguration configuration)
         {

@@ -12,7 +12,7 @@ namespace Rido.Mqtt.PnPApi.Binders
         private readonly string responseTopic;
         private readonly IMqttConnection connection;
 
-        public ServiceRequestResponseBinder(IMqttConnection c, string reqTopic, string respTopic, int expectedStatus)
+        public ServiceRequestResponseBinder(IMqttConnection c, string reqTopic, string respTopic, string subFilter)
         {
             connection = c;
             requestTopic = reqTopic.Replace("{clientId}", c.ClientId);
@@ -21,7 +21,7 @@ namespace Rido.Mqtt.PnPApi.Binders
 
             connection.OnMessage += async m =>
             {
-                if (m.Topic.StartsWith(responseTopic + expectedStatus.ToString()))
+                if (m.Topic.StartsWith(responseTopic + subFilter))
                 {
                     if (pendingRequests.TryRemove(counter, out var tcs))
                     {

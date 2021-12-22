@@ -1,15 +1,12 @@
-﻿using System;
+﻿using Rido.Mqtt.IoTHubPnPClient;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Xunit;
 
 namespace Rido.Mqtt.PnPApi.Tests
 {
-
-    class MyComponent : Component
+    internal class MyComponent : Component
     {
         public ReadOnlyProperty<string> MyReadOnlyProp;
         public WritableProperty<AComplexObj> MyWritableComplexObj;
@@ -21,8 +18,10 @@ namespace Rido.Mqtt.PnPApi.Tests
 
         public override Dictionary<string, object> ToJsonDict()
         {
-            var res = new Dictionary<string, object>();
-            res.Add(MyReadOnlyProp.Name, MyReadOnlyProp.PropertyValue);
+            var res = new Dictionary<string, object>
+            {
+                { MyReadOnlyProp.Name, MyReadOnlyProp.PropertyValue }
+            };
             return res;
         }
     }

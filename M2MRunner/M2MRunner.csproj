@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>dotnet-M2MRunner-AB4019CD-C844-4CC5-9D1C-05B98053B689</UserSecretsId>
   </PropertyGroup>

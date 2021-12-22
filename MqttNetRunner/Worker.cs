@@ -1,4 +1,4 @@
-using Rido.Mqtt.IoTHubPnPClient;
+//using Rido.Mqtt.IoTHubPnPClient;
 using Rido.Mqtt.MqttNetPnPAdapter;
 using Rido.Mqtt.PnPApi;
 using Rido.Mqtt.Tests.SampleDevices;

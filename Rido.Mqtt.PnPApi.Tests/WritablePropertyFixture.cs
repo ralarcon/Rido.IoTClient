@@ -45,7 +45,7 @@ namespace Rido.Mqtt.PnPApi.Tests
                 }
             };
 
-            Assert.Equal(Stringify(expectedPayload["blah"]), Stringify(updaterMock.ReceivedPayload["blah"]));
+            Assert.Equal(Stringify(expectedPayload), Stringify(updaterMock.ReceivedPayload));
             Assert.Equal(0.2, wp.PropertyValue.Value);
             Assert.Equal(0, wp.PropertyValue.Version);
             Assert.Equal(203, wp.PropertyValue.Status);

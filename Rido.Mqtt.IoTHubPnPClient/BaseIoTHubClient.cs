@@ -15,7 +15,6 @@ namespace Rido.Mqtt.IoTHubPnPClient
         public BaseIoTHubClient(IMqttConnection connection)
         {
             Connection = connection;
-            //ConnectionSettings = cs;
             getTwinBinder = new GetTwinBinder(connection);
             updateTwinBinder = new UpdateTwinBinder(connection);
         }   

@@ -6,6 +6,8 @@ namespace Rido.Mqtt.PnPApi.Tests
 {
     public class ReadOnlyPropertyFixture
     {
+        static string Stringify(object o) => System.Text.Json.JsonSerializer.Serialize(o);
+
         [Fact]
         public async Task ReportSimpleRootProperty()
         {
@@ -19,7 +21,7 @@ namespace Rido.Mqtt.PnPApi.Tests
                     "aProp", 0.4
                 }
             };
-            Assert.Equal(expectedPayload["aProp"], updaterMock.ReceivedPayload["aProp"]);
+            Assert.Equal(Stringify(expectedPayload), Stringify(updaterMock.ReceivedPayload));
         }
 
         [Fact]
@@ -35,7 +37,7 @@ namespace Rido.Mqtt.PnPApi.Tests
                     "aComplexObj", new AComplexObj() { AStringProp = "hello", AIntProp=23}
                 }
             };
-            Assert.Equal(expectedPayload["aComplexObj"], updaterMock.ReceivedPayload["aComplexObj"]);
+            Assert.Equal(Stringify(expectedPayload), Stringify(updaterMock.ReceivedPayload));
         }
 
         [Fact]
@@ -59,7 +61,7 @@ namespace Rido.Mqtt.PnPApi.Tests
                     }
                 }
             };
-            Assert.Equal(expectedPayload["c1"], updaterMock.ReceivedPayload["c1"]);
+            Assert.Equal(Stringify(expectedPayload), Stringify(updaterMock.ReceivedPayload));
         }
 
         [Fact]
@@ -83,7 +85,7 @@ namespace Rido.Mqtt.PnPApi.Tests
                     }
                 }
             };
-            Assert.Equal(expectedPayload["c1"], updaterMock.ReceivedPayload["c1"]);
+            Assert.Equal(Stringify(expectedPayload), Stringify(updaterMock.ReceivedPayload));
         }
     }
 }

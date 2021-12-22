@@ -8,7 +8,7 @@ namespace Rido.Mqtt.IoTHubPnPClient
         private readonly ServiceRequestResponseBinder binder;
 
         public GetTwinBinder(IMqttConnection c) =>
-            binder = new ServiceRequestResponseBinder(c, "$iothub/twin/GET/", "$iothub/twin/res/", 200);
+            binder = new ServiceRequestResponseBinder(c, "$iothub/twin/GET/", "$iothub/twin/res/", "200");
 
         public Task<string> ReadPropertiesDocAsync(CancellationToken token = default)
             => binder.SendRequestWaitForResponseAsync(string.Empty, token);

@@ -41,6 +41,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rido.Mqtt.M2mPnPAdapter", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M2MRunner", "M2MRunner\M2MRunner.csproj", "{F6AADF92-0855-4B71-BBF0-972508B290B6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "adapters", "adapters", "{09B4F8D4-EAEE-4715-BD20-47CC646162AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "runners", "runners", "{7CBC3FBD-F541-4456-B3F8-4427F25E3711}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rido.Mqtt.AwsPnPClient", "Rido.Mqtt.AwsPnPClient\Rido.Mqtt.AwsPnPClient.csproj", "{6600C92D-586F-4508-9A1D-DB47ECC753B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,9 +117,19 @@ Global
 		{F6AADF92-0855-4B71-BBF0-972508B290B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6AADF92-0855-4B71-BBF0-972508B290B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6AADF92-0855-4B71-BBF0-972508B290B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6600C92D-586F-4508-9A1D-DB47ECC753B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6600C92D-586F-4508-9A1D-DB47ECC753B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6600C92D-586F-4508-9A1D-DB47ECC753B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6600C92D-586F-4508-9A1D-DB47ECC753B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F4C6CD2E-7200-43E5-BC33-DDC5C905028F} = {7CBC3FBD-F541-4456-B3F8-4427F25E3711}
+		{16461CA6-B9A8-4507-92A9-76204E539DE6} = {09B4F8D4-EAEE-4715-BD20-47CC646162AD}
+		{2992E8A4-4783-49D9-830B-5E1D566711FF} = {09B4F8D4-EAEE-4715-BD20-47CC646162AD}
+		{F6AADF92-0855-4B71-BBF0-972508B290B6} = {7CBC3FBD-F541-4456-B3F8-4427F25E3711}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2E3758FF-3AA2-4D7E-A124-56FDC4E74DAB}

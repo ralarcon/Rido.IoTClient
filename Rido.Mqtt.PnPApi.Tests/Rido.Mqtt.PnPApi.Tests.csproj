@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Rido.Mqtt.IoTHubPnPClient\Rido.Mqtt.IoTHubPnPClient.csproj" />
     <ProjectReference Include="..\Rido.Mqtt.PnPApi\Rido.Mqtt.PnPApi.csproj" />
   </ItemGroup>
 
